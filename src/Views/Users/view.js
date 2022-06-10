@@ -6,7 +6,9 @@ import React from "react";
 import Logo from "../../assets/Logo.jpg"
 import "./view.css"
 // import { Home, BarChartOutline, AccessibilityOutline, ReaderOutline } from 'react-ionicons'
-import UserProfile from "../UserProfile/UserProfile";
+// import UserProfile from "../UserProfile/UserProfile";
+import UserProfile2 from "../UserProfile/UserProfile2";
+import UserProfile3 from "../UserProfile/UserProfile3";
 
 
 
@@ -24,7 +26,9 @@ function view() {
           <AccessibilityOutline color={'#00000'} height="15px" width="50px" className = "icons_select"/> <li className="li_line">UserProfile</li>
           <ReaderOutline color={'#00000'} height="15px" width="50px" className = "icons_select"/><li className="li_line">Reports</li>
           </ul> */}
-          <UserProfile />
+          {/* <UserProfile /> */}
+          {/* <UserProfile2 /> */}
+          <UserProfile3 />
         </div>
       </div>
     </section>
