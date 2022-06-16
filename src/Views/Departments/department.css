@@ -1,0 +1,76 @@
+.main_department{
+    width: 100%;
+     display: flex;
+     align-items: center;
+}
+
+.form_department {
+    height: fit-content;
+    /* background-color: #fff; */
+    border-radius: 0.25rem;
+    box-shadow: 0.5px .5px 3px #000;
+    overflow: hidden;
+    /* border: 3px solid #d21404; */
+}
+
+.form_department .alertt {
+    background-color: #000447 !important;
+    color: #fff;
+    border: none;
+    border-radius: 3px 3px 0 0;
+}
+
+.form_department .form {
+    background-color: #ededef;
+    height: auto;
+    overflow: auto;
+}
+
+.form_department .form::-webkit-scrollbar-thumb {
+    background: #000447;
+    border-radius: 10px 0 10px 0;
+}
+
+.form_department .form::-webkit-scrollbar {
+    width: .7rem;
+    background-color: none;
+}
+
+.form_department .form label {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #000447;
+}
+
+.form_department .form .form_check {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form_department .form input,
+.form_department .form select,
+.form_department .form textarea {
+    padding: 5px 10px;
+    font-size: .7rem;
+}
+textarea {
+    resize: none;
+}
+
+.form_department .form input:focus,
+.form_department .form select:focus,
+.form_department .form textarea:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.form_department .form .form_btn {
+    background-color: #000447;
+    border: none;
+}
+
+
+.form_department .form .input_ {
+    width: 100% !important;
+}

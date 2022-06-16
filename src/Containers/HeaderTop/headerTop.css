@@ -1,0 +1,38 @@
+.header_top .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #36454f;
+    border: 1px solid #000;
+}
+
+.header_top .navbar a {
+    color: #fff;
+}
+
+.header_top .navbar .nav-item a,
+.header_top .navbar .navbar-nav a {
+    color: #fff;
+}
+
+.header_top .navbar a:hover,
+.header_top .navbar .nav-item a:hover,
+.header_top .navbar .navbar-nav a:hover {
+    color: #fff;
+}
+
+.header_top .navbar {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.header_top .navbar::-webkit-scrollbar-thumb {
+    background: #ededed;
+    border-radius: 10px 0 10px 0;
+}
+
+.header_top .navbar::-webkit-scrollbar {
+    /* width: .2rem; */
+    height: .5rem;
+    background-color: #36454f;
+}

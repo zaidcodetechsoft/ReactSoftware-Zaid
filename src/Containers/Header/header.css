@@ -1,0 +1,91 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.navbar_  {
+    background-color: #36454F !important;
+    width: 3.7rem;
+    transition: .3s all;
+    position: sticky ;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.navbar_:hover {
+  width: 15%;
+  max-width: 40rem;
+}
+
+.navbar_ .logo {
+  width: 4rem;
+  margin: 0 auto;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_ .logo img {
+  width: 100%;
+}
+
+.navbar_:hover .logo {
+  width: 10rem;
+}
+
+.navbar_ ul {
+  height: 100vh;
+  overflow: auto;
+  padding: 20px 0;
+}
+
+.navbar_ ul::-webkit-scrollbar-thumb {
+  background: #ededed;
+  border-radius: 10px 0 10px 0;
+}
+
+.navbar_ ul::-webkit-scrollbar {
+  width: .5rem;
+  background-color: #36454f;
+}
+
+
+.navbar_ ul li {
+    border-bottom: 1px  solid #000;
+    background-color: transparent;
+    padding-top: 30px ;
+    padding-bottom: 30px ;
+   
+}
+
+.navbar_ ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  gap: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar_ ul li:last-child {
+  border: none;
+}
+
+/* .navbar_ ul li span {
+  position: absolute;
+  right: -100%;
+  transition: .3s all;
+  visibility: hidden;
+} */
+
+/* .navbar_:hover { 
+  width: 15%;
+} */
+/* 
+.navbar_:hover ul li span {
+  right: 10%;
+  visibility: visible;
+} */
