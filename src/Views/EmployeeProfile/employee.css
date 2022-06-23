@@ -6,7 +6,7 @@
 
 .home_form {
     height: fit-content;
-    background-color: #ededef;
+    /* background-color: #ededef; */
     border-radius: 0.25rem;
     box-shadow: 0.5px .5px 3px #000;
     overflow: hidden;
@@ -19,23 +19,17 @@
 
 
 .home_form .alertt {
-    background-color: #000447 !important;
+    background-color: #36454F !important;
+    /* background-color: #000447 !important; */
     color: #fff;
     border: none;
     border-radius: 3px 3px 0 0;
-    /* padding: 30px 0; */
+    padding: 5px 0;
 }
 
 
 .home_form .form {
-    /* background-color: #ededef; */
     height: auto;
-    /* background-color: transparent; */
-    /* background-image: none !important; */
-    /* background-color: #c51203; */
-    /* background-color: #20617f; */
-    /* height: 500px; */
-    /* overflow: auto; */
 }
 
 .home_form .form::-webkit-scrollbar-thumb {
@@ -51,7 +45,7 @@
 .home_form .form label {
     font-size: .7rem;
     font-weight: 500;
-    color: #000447;
+    color: #36454F;
     /* color: #fff; */
 }
 
@@ -81,7 +75,8 @@
 }
 
 .home_form .form .form_btn {
-    background-color: #000447;
+    background-color: #36454F;
+    /* background-color: #000447; */
     border-color: transparent;
 }
 
@@ -114,12 +109,16 @@
 }
 
 .home_form .form .Empdepartment {
-    width: 40%;
+    width: 30%;
+}
+
+.home_form .form .email {
+    width: 30%;
 }
 
 
 .home_form .form .Empdesignation {
-    width: 60%;
+    width: 40%;
 }
 
 .home_form .form .Emergcontactperson {

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Form, Button, Alert, Container, Col, Row } from 'react-bootstrap';
+import { Form, Button, Alert} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './employee.css'
 
@@ -8,7 +8,7 @@ function Home() {
   return (
     <main className="main_home mt-5">
      
-      <div className="home_form bg-white    w-50">
+      <div className="home_form bg-whites    w-50">
         <Alert className="text-center fs-4 m-0   alertt">
           Employee Profile
         </Alert>
@@ -36,6 +36,12 @@ function Home() {
           </div>
 
           <div className="input_group d-flex align-items-center justify-content-between gap-2">
+
+          <Form.Group className="mb-2 email" controlId="formBasicEmail">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="text" placeholder="Email" className="" />
+            </Form.Group>
+
             <Form.Group className="mb-2 Empdepartment" controlId="formBasicEmail">
               <Form.Label>Employee Department</Form.Label>
               <Form.Select>
@@ -50,6 +56,8 @@ function Home() {
               <Form.Label>Employee Designation</Form.Label>
               <Form.Control type="text" placeholder="Employee Designation" className="" />
             </Form.Group>
+
+           
 
           </div>
           <div className="input_group d-flex align-items-center justify-content-between  gap-2">

@@ -7,7 +7,7 @@ import './department.css'
 function Department() {
   return (
     <main className="main_department mt-5">
-    <div className="form_department m-auto w-50">
+    <div className="form_department bg-white m-auto w-50">
       <Alert className="text-center fs-4 m-0   alertt">
         Departments
       </Alert>

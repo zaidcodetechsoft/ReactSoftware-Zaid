@@ -6,9 +6,9 @@ import './menu.css'
 function Menu() {
   return (
     <main className="main_menu mt-5">
-      <div className="menu_form m-auto w-50">
+      <div className="menu_form bg-white m-auto w-50">
         <Alert className="text-center fs-4 m-0   alertt">
-          Menues
+          Menus
         </Alert>
         <Form className="form py-3 px-4" >
           <div className="input_group d-flex align-items-center justify-content-between gap-2">

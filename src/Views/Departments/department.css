@@ -6,24 +6,27 @@
 
 .form_department {
     height: fit-content;
-    /* background-color: #fff; */
+    /* background-color: #ededef; */
     border-radius: 0.25rem;
     box-shadow: 0.5px .5px 3px #000;
     overflow: hidden;
-    /* border: 3px solid #d21404; */
+    margin: auto;
+
 }
 
+
+
 .form_department .alertt {
-    background-color: #000447 !important;
+    background-color: #36454F !important;
     color: #fff;
     border: none;
     border-radius: 3px 3px 0 0;
+    padding: 5px 0;
 }
 
+
 .form_department .form {
-    background-color: #ededef;
     height: auto;
-    overflow: auto;
 }
 
 .form_department .form::-webkit-scrollbar-thumb {
@@ -37,10 +40,12 @@
 }
 
 .form_department .form label {
-    font-size: .8rem;
+    font-size: .7rem;
     font-weight: 500;
-    color: #000447;
+    color: #36454F;
+    /* color: #fff; */
 }
+
 
 .form_department .form .form_check {
     display: flex;
@@ -66,7 +71,7 @@ textarea {
 }
 
 .form_department .form .form_btn {
-    background-color: #000447;
+    background-color: #36454F;
     border: none;
 }
 

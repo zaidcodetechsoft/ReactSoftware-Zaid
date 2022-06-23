@@ -18,14 +18,15 @@
 }
 
 .taxes_form .alertt {
-    background-color: #000447 !important;
+    background-color: #36454F !important;
     color: #fff;
     border: none;
     border-radius: 3px 3px 0 0;
+    padding: 5px 0;
 }
 
 .taxes_form .form {
-    background-color: #ededef;
+    /* background-color: #ededef; */
     height: auto;
     /* background-color: transparent; */
     /* background-image: none !important; */
@@ -79,7 +80,7 @@ textarea {
 }
 
 .taxes_form .form .form_btn {
-    background-color: #000447;
+    background-color: #36454F;
     border-color: transparent;
 }
 

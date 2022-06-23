@@ -2,17 +2,17 @@ import React from "react";
 import { Form, Button, Alert } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
-import "./UserLogin.css";
-import CTSLogo from "../../assets/images/ctslogocut.png"
-// import Logo from "../../assets/images/logo.png";
+import "./UserProfile.css";
+import Logo from "../../assets/images/CTSLogo.png";
 
-function UserProfile2() {
+function UserProfile() {
   return (
     <>
+
     <main className="main_user2">
       <div className="login_form1  ">
       <Alert className="text-center fs-4 m-0   alertt">
-            <img src= {CTSLogo} alt="" />
+            <img src={Logo} style={{width:'100%'}} />
           </Alert>
         <Form className="form py-3 px-4 ">
 
@@ -28,13 +28,14 @@ function UserProfile2() {
             </Form.Group>
             </div>
             <Button className="form_btn mt-2 w-100" type="submit">
-            <NavLink to="/view">
+            <NavLink to="/home">
             Log In
-            </NavLink>        
+            </NavLink>
+              
           </Button>
           <div className="message text-center mt-4">
           <p>
-            Forgot Password? <NavLink to="/user3" className="mx-2">
+            Forgot Password? <NavLink to="/" className="mx-2">
             Click Here
             </NavLink>
           </p>
@@ -65,4 +66,4 @@ function UserProfile2() {
   );
 }
 
-export default UserProfile2;
+export default UserProfile;

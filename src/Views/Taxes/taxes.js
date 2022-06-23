@@ -6,7 +6,7 @@ import './taxes.css'
 function Taxes() {
   return (
     <main className="main_taxes mt-5">
-      <div className="taxes_form m-auto w-50">
+      <div className="taxes_form bg-white m-auto w-50">
         <Alert className="text-center fs-4 m-0   alertt">
           Taxes
         </Alert>

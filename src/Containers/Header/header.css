@@ -6,12 +6,12 @@
 }
 
 .navbar_  {
-    background-color: #36454F !important;
-    width: 3.7rem;
+  background-color: #36454F  !important; 
+    width: 4rem;
     transition: .3s all;
-    position: sticky ;
     height: 100vh;
     overflow: hidden;
+    padding: 0;
 }
 
 .navbar_:hover {
@@ -20,25 +20,31 @@
 }
 
 .navbar_ .logo {
-  width: 4rem;
+  /* width: 4rem; */
+  height: 3.5rem;
   margin: 0 auto;
-  height: 3rem;
   display: flex;
   align-items: center;
+  background-color: #e7e8e8;
+  width: 100%;
+  /* background-color: #73818a; */
+  /* background-color: #36454F; */
 }
 
 .navbar_ .logo img {
   width: 100%;
+  max-width: 8rem;
+  margin: 0 auto;
 }
 
-.navbar_:hover .logo {
-  width: 10rem;
+.navbar_:hover .logo img {
+  width: 8rem !important;
 }
 
 .navbar_ ul {
   height: 100vh;
   overflow: auto;
-  padding: 20px 0;
+  padding-bottom: 20px;
 }
 
 .navbar_ ul::-webkit-scrollbar-thumb {
@@ -48,44 +54,49 @@
 
 .navbar_ ul::-webkit-scrollbar {
   width: .5rem;
-  background-color: #36454f;
+  background-color: #000447;
 }
 
 
 .navbar_ ul li {
-    border-bottom: 1px  solid #000;
-    background-color: transparent;
-    padding-top: 30px ;
-    padding-bottom: 30px ;
-   
+  border-bottom: 1px  solid #606060;
+  background-color: transparent;
+    padding: 7px 0 7px 20px;
+    padding-left: 20px;
+    border-radius: 0 !important;
 }
 
 .navbar_ ul li a {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  gap: 2rem;
-  color: #fff;
+  /* justify-content: flex-start; */
+  gap: 2.3rem;
+  text-align: start;
+  color: #fff;  
   text-decoration: none;
 }
 
+.navbar_ ul li a i {
+  width: 10%;
+}
+
+.navbar_ ul li a span{
+  width: 90%; 
+}
+
+.navbar_ ul li:first-child {
+  border-top: 1px  solid #606060;
+}
 .navbar_ ul li:last-child {
   border: none;
 }
 
-/* .navbar_ ul li span {
-  position: absolute;
-  right: -100%;
-  transition: .3s all;
-  visibility: hidden;
-} */
 
-/* .navbar_:hover { 
-  width: 15%;
-} */
-/* 
-.navbar_:hover ul li span {
-  right: 10%;
-  visibility: visible;
-} */
+.navbar_:hover ul li {
+  padding: 7px 0 7px 20px;
+  /* border-bottom: 1px  solid #606060; */
+}
+
+.navbar_:hover ul li a  {
+  gap: 2.2rem;
+}
