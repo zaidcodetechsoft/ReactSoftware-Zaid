@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Col, Row, Form } from 'react-bootstrap';
+import { Container, Col, Row, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './registry.css'
 
@@ -18,7 +18,7 @@ function Registry() {
                                     <Form.Label>Options:</Form.Label>
                                     <div className='py-1 px-2 w-100'>
                                         <Form.Select value={selects} onChange={e => setSelects(e.target.value)}>
-                                            <option checked></option>
+                                            <option checked ></option>
                                             <option >Credential must be passing</option>
                                             <option>Must have a valid non-system generated SSN/SSI</option>
                                             <option>Must have at least one address</option>
@@ -71,6 +71,89 @@ function Registry() {
                                 </div>
 
                                 <Form.Label>{selectsA}</Form.Label>
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form Option'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Default Notification Setting (Registrant Contacts)</Form.Label>
+                                <div className='inner_ d-flex'>
+                                    <Form.Label>Options:</Form.Label>
+                                    <div className='py-1 px-2 w-100'>
+                                        <Form.Select value={selectsA} onChange={e => setSelectsA(e.target.value)}>
+                                            <option checked></option>
+                                            <option>Email/Text Registry Module</option>
+                                            <option>Email/Text available Shifts</option>
+                                            <option>Email/Text Sheduling Confimmations</option>
+                                            <option>Email/Text Credential Status Notifications</option>
+                                        </Form.Select>
+
+                                    </div>
+                                </div>
+
+                                <Form.Label>{selectsA}</Form.Label>
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form frequency'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Frequuency Rules</Form.Label>
+                                <div className='py-1 px-2 w-100 '>
+                                    <div className='frequency_'>
+                                <Form.Label className='d-flex'>Send every <Form.Control type='text' placeholder='15' /> days when faling in <Form.Control type='text' placeholder='15' /> days </Form.Label>
+                                <Form.Label className='d-flex'>Send every <Form.Control type='text' placeholder='15' /> days when faling in <Form.Control type='text' placeholder='15' /> days </Form.Label>
+                                <Form.Label className='d-flex'>Send every <Form.Control type='text' placeholder='15' /> days when faling in <Form.Control type='text' placeholder='15' /> days </Form.Label>
+                                <Form.Label className='d-flex'>Send every <Form.Control type='text' placeholder='15' /> days when faling in <Form.Control type='text' placeholder='15' /> days </Form.Label>
+                                    </div>
+                                </div>
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Credential Status Emails only sent to Registrants in Status</Form.Label>
+                                <div className='py-1 px-2 w-75'>
+                                    <Form.Select >
+                                        <option></option>
+                                        <option>Disabled select</option>
+                                    </Form.Select>
+                                </div>
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form policy'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Work History</Form.Label>
+                                <div className='inner_ policy_registry  d-flex'>
+                                    <div className='right'>
+                                        <Form.Label style={{ visibility: 'hidden' }}>sds</Form.Label>
+                                    </div>
+                                    <div className='py-1 px-2 left history'>
+                                        <Form.Check className='d-flex align-items-center gap-1 justify-content-start p-0' type="checkbox" label='Enable Work History for Scheduled Shifts' />
+                                    </div>
+                                </div>
+
+                                <div className='inner_ policy_registry d-flex '>
+                                    <div className='right'>
+                                        <Form.Label>Days To Wait:</Form.Label>
+                                    </div>
+                                    <div className='py-1 px-2 left '>
+                                        <div className='left_ w-25'>
+                                            <Form.Control type="text" placeholder="99" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <Form.Label>Numbers of days to wait, after the shift date of a scheduled shift, before inserting abd updating work history information. This will always be superseded within timecards during payroll processing, This feature is beneficial When you are not using timecards and payroll</Form.Label>
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form header'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Registrant Profile Report Header:</Form.Label>
+                                <div className='py-1 px-2'>
+                                    <Form.Label className='m-0 pb-1 p-0'>Clicking this button will update PSD Codes for all registrants with resident payroll locations within the state of pennysvina.Clicking this button will update PSD Codes for all registrants with resident payroll locations within the state of pennysvina.Clicking this button will update PSD Codes for all registrants with resident payroll locations within the state of pennysvina.</Form.Label>
+                                </div>
+                                <Button >Generate PSD Codes</Button>
                             </Form.Group>
                         </div>
 
@@ -193,31 +276,66 @@ function Registry() {
                             </Form.Group>
                         </div>
 
-                        <div className='tab_form policy'>
-                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
-                                <Form.Label className='m-0 pb-1'>Work History</Form.Label>
-                                <div className='inner_ policy_registry  d-flex'>
-                                    <div className='right'>
-                                        <Form.Label style={{ visibility: 'hidden' }}>sds</Form.Label>
-                                    </div>
-                                    <div className='py-1 px-2 left history'>
-                                        <Form.Check className='d-flex align-items-center gap-1 justify-content-start p-0' type="checkbox" label='Enable Work History for Scheduled Shifts' />
-                                    </div>
-                                </div>
+                       
 
-                                <div className='inner_ policy_registry d-flex '>
-                                    <div className='right'>
-                                        <Form.Label>Days To Wait:</Form.Label>
-                                    </div>
-                                    <div className='py-1 px-2 left '>
-                                        <div className='left_ w-25'>
-                                            <Form.Control type="text" placeholder="99" />
-                                        </div>
-                                    </div>
+                        <div className='tab_form overtime'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Web Portal Access</Form.Label>
+                                <div className='py-1 px-2 '>
+                                    <Form.Check className='d-flex align-items-center' type="checkbox" label="Enabled" />
                                 </div>
-                                <Form.Label>Numbers of days to wait, after the shift date of a scheduled shift, before inserting abd updating work</Form.Label>
+                                <Form.Label className='overtimeLabel_'>Enabled the option for turning on web portal access within the registrant online access sub module.</Form.Label>
                             </Form.Group>
                         </div>
+
+                        <div className='tab_form overtime'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Web Portal Timecard Images</Form.Label>
+                                <div className='py-1 px-2 '>
+                                    <Form.Check className='d-flex align-items-center' type="checkbox" label="Allow Registrant to View Timecard Images Within Web Portal" />
+                                </div>
+                                {/* <Form.Label className='overtimeLabel_'>Enabled the option for turning on web portal access within the registrant online access sub module.</Form.Label> */}
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form overtime'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Web Portal Unsheduled Timesheets</Form.Label>
+                                <div className='py-1 px-2 '>
+                                    <Form.Check className='d-flex align-items-center' type="checkbox" label="Allow Registrant to Add Unsheduled Timesheets" />
+                                </div>
+                                {/* <Form.Label className='overtimeLabel_'>Enabled the option for turning on web portal access within the registrant online access sub module.</Form.Label> */}
+                            </Form.Group>
+                        </div>
+
+
+                        <div className='tab_form'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Web Portal Default Portal Security Group</Form.Label>
+                                <div className='inner_ hire d-flex align-items-center'>
+                                    {/* <Form.Label>Hire Date Rule:</Form.Label> */}
+                                    <div className='py-1 px-2 w-50'>
+                                        <Form.Select >
+                                            <option>All Permissions</option>
+                                            <option>Disabled select</option>
+                                        </Form.Select>
+                                    </div>
+                                </div>
+                            </Form.Group>
+                        </div>
+
+                        <div className='tab_form'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Registrant Profile Report Header:</Form.Label>
+                                <div className='py-1 px-2'>
+                                    <Form.Control type="text" />
+                                </div>
+                            </Form.Group>
+                        </div>
+
+
+                        
+
 
                     </Form>
                 </Col>

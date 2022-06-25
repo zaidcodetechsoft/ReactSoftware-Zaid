@@ -6,6 +6,19 @@ import './general.css'
 
 function General() {
     const [selects, setSelects] = useState();
+    // const [items, setItems] = useState([]);
+
+
+
+
+    const eventCall = (e) => {
+        setSelects(e.target.value);
+    }
+    // const listOfItems = () => {
+    //     setItems (()=> {
+    //         return [];
+    //     })
+    // }
     return (
         <Container fluid>
             <Row>
@@ -190,8 +203,9 @@ function General() {
                                 <div className='inner_ d-flex'>
                                     <Form.Label>Options:</Form.Label>
                                     <div className='py-1 px-2 w-100'>
-                                        <Form.Select value={selects} onChange={e => setSelects(e.target.value)}>
-                                            <option checked></option>
+                                        {/* <Form.Select > */}
+                                        <Form.Select onChange={eventCall}>
+                                            <option Checked  disabled>Select Option</option>
                                             <option>Agency Credentials must pass</option>
                                             <option>Client Credentials must pass</option>
                                             <option>Allow overtime</option>
@@ -208,14 +222,11 @@ function General() {
 
                                     </div>
                                 </div>
-                                {/* {selects.map((index,text)=> {
+                                {/* {items.map((textVal)=> {
                                     return(
-                                       <div className='label' key={index}>
-                                        <label>{text}</label>
+                                       <div className='label'>
+                                        <label>{textVal}</label>
                                        </div>
-                                    <ul key={index}>
-                                        <li>{text}</li>
-                                    </ul>
                                     )
                                 })} */}
                                 {/* e3f2f8 */}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Container, Row, Col } from "react-bootstrap";
+import { Form, Container, Row, Col, FloatingLabel } from "react-bootstrap";
 import "./payRoll.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,7 +9,7 @@ function PayRoll() {
     <Container fluid>
       <Row>
         <Col md={6}>
-          <Form className="general_form2">
+          <Form className="payroll_form">
             <div className="tab_form">
               <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
                 <Form.Label className="m-0 pb-1">
@@ -153,7 +153,7 @@ function PayRoll() {
                 <div className="inner_ d-flex">
                   <Form.Label>Checks maybe voided within:</Form.Label>
                   <div className="py-1 px-1 w-25 bcd">
-                    <Form.Select className = "fs-10">
+                    <Form.Select className="fs-10">
                       <option>No Validation</option>
                       <option>Disabled select</option>
                       <option>Disabled select</option>
@@ -206,57 +206,51 @@ function PayRoll() {
           </Form>
         </Col>
         <Col md={6}>
-          <Form className="general_form2">
+          <Form className="payroll_form">
             <div className="tab_form override">
               <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
-                <Form.Label className="m-0 pb-1">
-                  Credential Status Override
-                </Form.Label>
-                <div className="inner_ d-flex">
-                  <div className="right">
-                    <Form.Label>PerDiem:</Form.Label>
-                  </div>
-                  <div className="py-1 px-2 left">
-                    <Form.Control type="text" placeholder="30" />
-                  </div>
+                <Form.Label className="m-0 pb-1">PayCheck Notice</Form.Label>
+                <div className="py-1 px-2">
+                  {/* <FloatingLabel> */}
+                  <Form.Control
+                    as="textarea"
+                    placeholder={"PAYROLL SUBMITALL REMAINDER:"
+                
+                    +  
+                
+                    "\r\n"
+                    
+                    +
+                    "\r\n"
+                    +
+                    
+                  "Our policy is you must turn in your time daily at the end of each shift to timeshift@amtstaffing.com. All saturday time is due in at end of shift. Deadline to receive friday night and saturday time is 9am Sunday morning. Texting your timesheet is strictly prohibited"
+                  
+                  +  
+                
+                  "\r\n"
+                  
+                  +
+                  "\r\n"
+                  +
+                  "If you deviate from this policy, your pay will be dealyed until the next payroll cycle."}
+                  />
+                  {/* </FloatingLabel> */}
                 </div>
-
-                <div className="inner_ d-flex">
-                  <div className="right">
-                    <Form.Label>Contracts:</Form.Label>
-                  </div>
-                  <div className="py-1 px-2 left">
-                    <Form.Control type="text" placeholder="30" />
-                  </div>
-                </div>
-
-                <Form.Label>
-                  These options can only be enabled by StafferLink Support,
-                  Enabling these options is not recommended, but will be allowed
-                  upon request.
-                </Form.Label>
               </Form.Group>
             </div>
 
-            <div className="tab_form default">
-              <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
-                <Form.Label className="m-0 pb-1">State Licence Rule</Form.Label>
-                <div className="inner_ d-flex">
-                  <Form.Label>State Rule:</Form.Label>
-                  <div className="py-1 px-2 w-50">
-                    <Form.Select>
-                      <option>No Validation</option>
-                      <option>Disabled select</option>
-                      <option>Disabled select</option>
-                    </Form.Select>
-                  </div>
-                </div>
-                <Form.Label>
-                  This rule applies to credential types [MILION , CLICN and
-                  (LION when a state is entered)]
-                </Form.Label>
-              </Form.Group>
-            </div>
+            <div className='tab_form overtime'>
+                            <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
+                                <Form.Label className='m-0 pb-1'>Overtime Warning</Form.Label>
+                                <div className='py-1 px-2 '>
+                                    <Form.Check className='d-flex align-items-center' type="checkbox"  label="Display warning if booking registrant into overtime" />
+                                    <p>
+                                      When enabled, users are presented with an optional field allowing them to change the payroll location used when paying paid leave.
+                                    </p>
+                                </div>
+                            </Form.Group>
+                        </div>
 
             <div className="tab_form Option">
               <Form.Group className="mb-3 tab_form_" controlId="formBasicText">
