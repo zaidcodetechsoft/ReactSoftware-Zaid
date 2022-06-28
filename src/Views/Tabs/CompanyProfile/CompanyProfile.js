@@ -5,8 +5,11 @@ import Client from './client/Client';
 import Registry from './registry/Registry'
 import PayRoll from './payRoll/PayRoll'
 import Reference from './reference/Reference';
+import Education from './Education/Education';
+import EmploymentHistory from './EmploymentHistory/EmploymentHistory';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ComplanyProfile.css'
+
 
 function CompanyProfile() {
   return (
@@ -32,11 +35,11 @@ function CompanyProfile() {
                         <Tab eventKey="reference" title="Reference">
                             <Reference />
                         </Tab>
-                        <Tab eventKey="invoicing" title="Invoicing">
-                            {/* <General /> */}
+                        <Tab eventKey="education" title="Education">
+                            <Education />
                         </Tab>
-                        <Tab eventKey="lockbox" title="Lockbox">
-                            {/* <General /> */}
+                        <Tab eventKey="employmentHistory" title="Employment History">
+                            <EmploymentHistory />
                         </Tab>
                         <Tab eventKey="branding" title="Branding">
                             {/* <General /> */}
