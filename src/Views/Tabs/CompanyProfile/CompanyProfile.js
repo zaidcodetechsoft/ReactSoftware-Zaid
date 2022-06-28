@@ -3,13 +3,14 @@ import { Tab, Tabs } from 'react-bootstrap';
 import General from './general/General';
 import Client from './client/Client';
 import Registry from './registry/Registry'
-import PayRoll from './PayRoll/PayRoll'
+import PayRoll from './payRoll/PayRoll'
+import Reference from './reference/Reference';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ComplanyProfile.css'
 
 function CompanyProfile() {
   return (
-    <main className='company_main_tab bg-light'>
+    <main className='company_main_tab '>
             <div className='cennt'>
                 <div className='tabbs1'>
                     <Tabs
@@ -28,8 +29,8 @@ function CompanyProfile() {
                         <Tab eventKey="payroll" title="Payroll">
                             <PayRoll />
                         </Tab>
-                        <Tab eventKey="symmetry" title="Symmetry">
-                            {/* <General /> */}
+                        <Tab eventKey="reference" title="Reference">
+                            <Reference />
                         </Tab>
                         <Tab eventKey="invoicing" title="Invoicing">
                             {/* <General /> */}

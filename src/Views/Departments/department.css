@@ -70,6 +70,10 @@ textarea {
     border-color: #ced4da;
 }
 
+.form-check-input[type=radio] {
+    padding: 7px !important;
+}
+
 .form_department .form .form_btn {
     background-color: #36454F;
     border: none;

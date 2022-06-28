@@ -97,6 +97,11 @@
   /* border-bottom: 1px  solid #606060; */
 }
 
+.navbar_ ul li:hover {
+  background-color: #536878;
+
+}
+
 .navbar_:hover ul li a  {
   gap: 2.2rem;
 }

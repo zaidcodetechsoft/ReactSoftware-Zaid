@@ -7,7 +7,8 @@ import Taxes from "./Views/Taxes/taxes";
 import Menu from "./Views/Menues/menu";
 import Navigation from './Containers/Header/Header';
 import NavigationTop from './Containers/HeaderTop/headerTop';
-import CompanyProfile from './Views/Tabs/CompanyProfile/CompanyProfile'
+import CompanyProfile from './Views/Tabs/CompanyProfile/CompanyProfile';
+
 import Error from './Error'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
